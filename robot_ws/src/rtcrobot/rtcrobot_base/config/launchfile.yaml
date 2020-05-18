@@ -1,0 +1,6 @@
+manual_files:
+  - ""
+mapping_files:
+  - "/home/uzi/robot_ws/src/rtcrobot/rtcrobot_navigation/launch/hector_mapping.launch"
+auto_files:
+  - "/home/uzi/robot_ws/src/rtcrobot/rtcrobot_navigation/launch/start_planner.launch"

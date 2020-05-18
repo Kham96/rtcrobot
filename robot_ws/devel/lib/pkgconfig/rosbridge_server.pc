@@ -1,0 +1,8 @@
+prefix=/home/uzi/robot_ws/devel
+
+Name: rosbridge_server
+Description: Description of rosbridge_server
+Version: 0.11.6
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

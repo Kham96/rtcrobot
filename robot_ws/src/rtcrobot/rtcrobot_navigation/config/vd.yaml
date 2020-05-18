@@ -1,0 +1,11 @@
+DWBLocalPlanner:
+  acc_lim_theta: 123
+  acc_lim_x: 0.3
+  acc_lim_y: 0
+  decel_lim_theta: -0.5
+  decel_lim_x: -0.5
+  decel_lim_y: 2
+  max_speed_xy: 0.5
+  max_vel_theta: 1
+  max_vel_x: 0.5
+  min_vel_x: 10

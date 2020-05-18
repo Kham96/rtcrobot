@@ -1,0 +1,7 @@
+image: wall.png
+resolution: 0.0500000007451
+origin: [-51.224998, -51.224998, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

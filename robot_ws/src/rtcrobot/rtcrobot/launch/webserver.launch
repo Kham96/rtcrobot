@@ -1,0 +1,16 @@
+<launch>
+  
+    <arg name="name" default="rtcweb"/>
+    <arg name="webpath" default="www"/> <!-- package webroot -->
+    <arg name="cached" default="false"/>
+
+    <arg name="port" default="8085"/>
+    <arg name="start_port" default="$(arg port)" />
+    <arg name="end_port" default="$(arg port)" />
+
+    <include file="$(find rtcrobot)/launch/rosbridge_websocket.launch" />
+
+    <node pkg="rtcrobot" type="webserver.py" name="$(arg name)"
+            args="--name $(arg name) --webpath $(arg webpath) --cached $(arg cached)
+                --port $(arg port) --start_port $(arg start_port) --end_port $(arg end_port)" output="screen"/>
+</launch>

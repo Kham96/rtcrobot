@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find rtcrobot_webinterface)/launch/rosbridge_websocket.launch" />
+    
+    <node pkg="rtcrobot_webinterface" type="server.py" name="robot_webserver">
+    </node>
+</launch>

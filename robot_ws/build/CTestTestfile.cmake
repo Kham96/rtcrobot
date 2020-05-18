@@ -1,0 +1,37 @@
+# CMake generated Testfile for 
+# Source directory: /home/gaara/robot_ws/src
+# Build directory: /home/gaara/robot_ws/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("hector_slam/hector_slam")
+subdirs("hector_slam/hector_slam_launch")
+subdirs("rtcrobot/rtcrobot_base")
+subdirs("rtcrobot/rtcrobot_gazebo")
+subdirs("rtcrobot/rtcrobot_navigation")
+subdirs("rtcrobot/rtcrobot_services")
+subdirs("rtcrobot/rtcrobot_webinterface")
+subdirs("hector_slam/hector_map_tools")
+subdirs("hector_slam/hector_nav_msgs")
+subdirs("rtcrobot/rtcrobot_msgs")
+subdirs("hector_slam/hector_marker_drawing")
+subdirs("rtcrobot/rtcrobot_description")
+subdirs("timed_roslaunch")
+subdirs("rtcrobot/rtcrobot_actions")
+subdirs("hector_slam/hector_compressed_map_transport")
+subdirs("rplidar_ros")
+subdirs("rtcrobot/rtcrobot_joystick")
+subdirs("hector_slam/hector_imu_attitude_to_tf")
+subdirs("hector_slam/hector_imu_tools")
+subdirs("hector_slam/hector_map_server")
+subdirs("hector_slam/hector_trajectory_server")
+subdirs("laser_filters")
+subdirs("ira_laser_tools")
+subdirs("rtcrobot/rtcrobot")
+subdirs("rtcrobot/rtcrobot_autodock")
+subdirs("rtcrobot/rtcrobot_driver")
+subdirs("sick_scan")
+subdirs("rtcrobot/rtcrobot_dwb_critics")
+subdirs("hector_slam/hector_mapping")
+subdirs("sbpl_lattice_planner")

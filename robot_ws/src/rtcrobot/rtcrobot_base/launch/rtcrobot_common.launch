@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="robot_x"   default="0.0" />
+  <arg name="robot_y"   default="0.0" />
+  <arg name="robot_yaw" default="0.0" />
+  <arg name="prefix"    value="" />   <!-- this has to be "value", not "default", otherwise subst_value doesn't work -->
+
+  <!-- Load URDF -->
+  <include file="$(find rtcrobot_description)/launch/upload.xml" />
+  <include file="$(find ira_laser_tools)/launch/laserscan_multi_merger.launch" />
+
+
+
+  <!-- Load ros_control controller configurations -->
+  <!-- <rosparam file="$(find mir_description)/config/joint_state_controller.yaml" command="load" /> -->
+  <!-- <rosparam file="$(find mir_description)/config/diffdrive_controller.yaml" command="load" subst_value="true" /> -->
+
+  <!-- Start the controllers -->
+  <!--<node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen"
+    args="joint_state_controller mobile_base_controller"/> -->
+  <!--<include file="$(find rtcrobot_base)/include/controller.xml" />-->
+  <include file="$(find rtcrobot_joystick)/launch/F710.launch" />
+  <include file="$(find rtcrobot_joystick)/launch/JoyControl.launch" />
+  <include file="$(find rtcrobot_base)/include/runnode.launch" />
+
+  <node pkg="rtcrobot_base" type="robotpose.py" name="robot_pose">
+  </node>
+  <!-- Start the sensor -->
+  <include file="$(find rtcrobot_base)/include/rplidar.launch" />
+  <include file="$(find rtcrobot_base)/include/rs.launch" />
+  <!--<include file="$(find rtcrobot_base)/include/sick_scan.xml" />-->
+
+  <!-- EKF -->
+  <!--<include file="$(find rtcrobot_base)/include/ekf.launch.xml"/>-->
+
+
+  <!-- run pointcloud_to_laserscan node -->
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="sickcloud_to_dockscan">
+
+        <remap from="cloud_in" to="f_cloud"/>
+        <remap from="scan" to="dock_scan"/>
+        <rosparam>
+            target_frame: f_scan_link # Leave disabled to output scan in pointcloud frame
+            transform_tolerance: 0.01
+            min_height: 0.0
+            max_height: 1.0
+
+            angle_min: 0.0 # 0
+            angle_max: 1.83259571 # M_PI/2
+            angle_increment: 0.0174532925 # M_PI/180
+            scan_time: 0.3333
+            range_min: 0.1 #distance
+            range_max: 2.0
+            use_inf: true
+            inf_epsilon: 1.0
+
+            # Concurrency level, affects number of pointclouds queued for processing and number of threads used
+            # 0 : Detect number of cores
+            # 1 : Single threaded
+            # 2->inf : Parallelism level
+            concurrency_level: 1
+        </rosparam>
+
+     </node>
+	<!--<node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="sickcloud_to_fscan">
+
+        <remap from="cloud_in" to="cloud_2"/>
+        <remap from="scan" to="f_scan"/>
+        <rosparam>
+            target_frame: f_scan_link # Leave disabled to output scan in pointcloud frame
+            transform_tolerance: 0.01
+            min_height: 0.0
+            max_height: 1.0
+
+            angle_min: -2.26892803 # -130deg
+            angle_max: 2.26892803 # 130deg
+            angle_increment: 0.0174532925 # M_PI/180
+            scan_time: 0.3333
+            range_min: 0.05 #distance
+            range_max: 10.0
+            use_inf: true
+            inf_epsilon: 1.0
+
+            # Concurrency level, affects number of pointclouds queued for processing and number of threads used
+            # 0 : Detect number of cores
+            # 1 : Single threaded
+            # 2->inf : Parallelism level
+            concurrency_level: 1
+        </rosparam>
+
+    </node>
+	<node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="sickcloud_to_bscan">
+
+        <remap from="cloud_in" to="cloud_1"/>
+        <remap from="scan" to="b_scan"/>
+        <rosparam>
+            target_frame: b_scan_link # Leave disabled to output scan in pointcloud frame
+            transform_tolerance: 0.01
+            min_height: 0.0
+            max_height: 1.0
+
+            angle_min: -2.26892803 # -130deg
+            angle_max: 2.26892803 # 130deg
+            angle_increment: 0.0174532925 # M_PI/180
+            scan_time: 0.3333
+            range_min: 0.05 #distance
+            range_max: 10.0
+            use_inf: true
+            inf_epsilon: 1.0
+
+            # Concurrency level, affects number of pointclouds queued for processing and number of threads used
+            # 0 : Detect number of cores
+            # 1 : Single threaded
+            # 2->inf : Parallelism level
+            concurrency_level: 1
+        </rosparam>
+
+    </node> -->
+
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="rscloud_to_rsscan">
+
+        <remap from="cloud_in" to="/depth/color/points"/>
+        <remap from="scan" to="rs_scan"/>
+        <rosparam>
+            target_frame: depth_link # Leave disabled to output scan in pointcloud frame
+            transform_tolerance: 0.01
+            min_height: -0.05
+            max_height: 0.2
+
+            angle_increment: 0.0174532925 # M_PI/180
+            scan_time: 0.3333
+            range_min: 0.02 #distance
+            range_max: 3.0
+            use_inf: true
+            inf_epsilon: 1.0
+
+            # Concurrency level, affects number of pointclouds queued for processing and number of threads used
+            # 0 : Detect number of cores
+            # 1 : Single threaded
+            # 2->inf : Parallelism level
+            concurrency_level: 1
+        </rosparam>
+
+    </node>
+
+
+  <!--Filter-->
+  <include file="$(find rtcrobot_base)/include/filter.xml" />
+ 
+  <!--<node name="b_rep117_laser_filter" pkg="rtcrobot_driver" type="rep117_filter.py" output="screen">
+    <remap from="scan" to="b_scan" />
+    <remap from="scan_filtered" to="b_scan_rep117" />
+  </node>
+
+  <node name="f_rep117_laser_filter" pkg="rtcrobot_driver" type="rep117_filter.py" output="screen">
+    <remap from="scan" to="f_scan" />
+    <remap from="scan_filtered" to="f_scan_rep117" />
+  </node> -->
+</launch>

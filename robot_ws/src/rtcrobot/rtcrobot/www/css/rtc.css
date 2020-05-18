@@ -1,0 +1,195 @@
+body {
+    --joysticksize: 10vw;
+    }
+.navband{
+    background: url(../img/LogoAGVO.png);
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#joystick-main {
+  justify-content: center;
+	display: flex;
+	height: 100vh;
+	align-items: center; 
+	margin: auto;
+	width: 100vw;
+}
+
+#joystick-base {
+  align-items: center;
+	bottom: 32px;
+	left: 32px;
+	height: 116px;
+	width: 116px;
+	border-radius: 100%;
+	border: 10px solid rgba(0, 136, 204, 0.1);
+	background: rgba(0, 136, 204, 0.05);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5) inset, 0 0 5px rgba(0, 0, 0, 0.2);
+	transition: border-color 0.3s;
+	cursor: pointer;
+	touch-action: none;
+}
+
+.joystick-stick {
+  justify-content: center;
+	position: absolute;
+	top: calc(50% - 32px);
+	left: calc(50%  32px);
+	height: 64px;
+	width: 64px;
+	border-radius: 100%;
+	background: rgba(0, 136, 204, 0.25);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.7) inset;
+	transition: 0.3s;
+	will-change: transform;
+	touch-action: none;
+};
+
+
+.joystick{
+    position: fixed; 
+    bottom: 5px;
+    bottom: var(--joysticksize);
+    right: var(--joysticksize);
+    background: aqua;
+    
+    /* position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    text-align: center;
+    color: #fff;
+    background: rgba(90,92,105,.5);
+    line-height: 46px; */
+}
+.tieude{
+  height: 200mm;
+  width: 200mm;
+  color: blue;
+}
+.p{
+  height: 5mm;
+  width: 5mm;
+  color: blue;
+}
+.btn-nav{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.btn-start {
+    color: #fff;
+    background-color: #1cc88947;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  .zone_joystick{
+    justify-content: center;
+    align-items: center; 
+    background-color: blue;
+
+  }
+  

@@ -1,0 +1,22 @@
+/* Dashboard Manage Page */
+.content .create_command {
+    text-align: center;
+    
+}
+
+.content .tablelist_dashboard {
+    margin-top: 10px;
+}
+
+/* Dashboard Create Page*/
+.content .create_name h1,h6{
+    text-align: center;
+}
+
+.content .create_dashboard {
+    padding-top: 20px;
+}
+
+.card.field-dashboard {
+    background-color: gray;
+}

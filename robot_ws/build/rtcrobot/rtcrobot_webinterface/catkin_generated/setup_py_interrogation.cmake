@@ -1,0 +1,6 @@
+set(rtcrobot_webinterface_SETUP_PY_VERSION "0.0.0")
+set(rtcrobot_webinterface_SETUP_PY_SCRIPTS "")
+set(rtcrobot_webinterface_SETUP_PY_PACKAGES "rtcrobot_webinterface")
+set(rtcrobot_webinterface_SETUP_PY_PACKAGE_DIRS "src/rtcrobot_webinterface")
+set(rtcrobot_webinterface_SETUP_PY_MODULES "")
+set(rtcrobot_webinterface_SETUP_PY_MODULE_DIRS "")

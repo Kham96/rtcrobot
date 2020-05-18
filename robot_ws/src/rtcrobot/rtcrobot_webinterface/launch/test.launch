@@ -1,0 +1,13 @@
+<launch>
+<!-- <arg name="whitelist" default="107"/> -->
+  <!-- <arg name="map_file" default="$(env ROS_HOSTNAME1)"  /> -->
+  <node name="talker" pkg="web" type="talker.py" output="screen">
+  <rosparam file="$(find rtcrobot_navigation)/config/dwb_local_planner_params.yaml" command="load" />  
+   <rosparam file="$(find rtcrobot_navigation)/config/vd.yaml" command="load" />  
+  <param name="cmd" value="ap_file" type="string" /> 
+  <!-- <rosparam param="planner_frequency" get_value="True">$(arg whitelist)</rosparam>
+  <arg  param="planner_frequency" name="whitelist" default="107"/> -->
+    <!-- <rosparam file="$(find web)/launch/move_base_params.yaml" command="dump" /> -->
+
+  </node>
+</launch>

@@ -1,0 +1,4 @@
+<include file="/home/mtk/catkin_ws/src/robot_ws/src/rtcrobot/rtcrobot_navigation/config/move_base_common_params.yaml">
+  <!-- all vars that included.launch requires must be set -->
+  <arg name="hoge" value="fuga" />
+</include>

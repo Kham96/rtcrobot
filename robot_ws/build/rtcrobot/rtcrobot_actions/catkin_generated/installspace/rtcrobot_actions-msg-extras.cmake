@@ -1,0 +1,2 @@
+set(rtcrobot_actions_MESSAGE_FILES "msg/DockAction.msg;msg/DockActionGoal.msg;msg/DockActionResult.msg;msg/DockActionFeedback.msg;msg/DockGoal.msg;msg/DockResult.msg;msg/DockFeedback.msg;msg/SaveMapAction.msg;msg/SaveMapActionGoal.msg;msg/SaveMapActionResult.msg;msg/SaveMapActionFeedback.msg;msg/SaveMapGoal.msg;msg/SaveMapResult.msg;msg/SaveMapFeedback.msg;msg/MissionAction.msg;msg/MissionActionGoal.msg;msg/MissionActionResult.msg;msg/MissionActionFeedback.msg;msg/MissionGoal.msg;msg/MissionResult.msg;msg/MissionFeedback.msg")
+set(rtcrobot_actions_SERVICE_FILES "")

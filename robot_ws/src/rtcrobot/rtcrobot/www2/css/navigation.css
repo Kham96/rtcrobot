@@ -1,0 +1,26 @@
+body {
+
+  }
+
+h1 {
+    padding: 0.4em 0.5em;
+    color: #494949;
+    background: #f4f4f4;
+    border-left: solid 5px #7db4e6;
+    border-bottom: solid 3px #d7d7d7;
+}
+
+h3 {
+    width: 100%;
+}
+
+#map_viewer {
+    background: #494949;
+    
+    touch-action: pan-y;
+  } 
+.pagefoot{
+    width: 100%;
+    height: 64px;
+    background: #7db4e6;
+}

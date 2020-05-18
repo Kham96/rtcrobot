@@ -1,0 +1,25 @@
+<launch>
+    <!--Argument-->
+    <arg name="base_frame_id"    default="base_footprint"/>
+    <arg name="odom_frame_id"    default="odom"/>
+    <arg name="base_width"       default="0.35"/>
+    <arg name="encoder_min"      default="-2147483647"/>
+    <arg name="encoder_max"      default="2147483647"/>
+    <arg name="ticks_meter"      default="7500000"/>
+
+
+    <!--Encoder to TF-->
+    <node name="diff_tf" pkg="rtcrobot" type="diff_tf.py">
+        <param name="base_frame_id"  value="$(arg base_frame_id)"/>
+        <param name="odom_frame_id"  value="$(arg odom_frame_id)"/>
+        <param name="base_width"     value="$(arg base_width)"/>
+        <param name="encoder_min"    value="$(arg encoder_min)"/>
+        <param name="encoder_max"    value="$(arg encoder_max)"/>
+        <param name="ticks_meter"    value="$(arg ticks_meter)"/>
+    </node>
+
+    <!--Control motor - Twist to motor driver -->
+    <node pkg="rtcrobot" type="motordriver.py" name="motor" output="screen">
+        <param name="base_width" value="$(arg base_width)"/>
+    </node>
+</launch>

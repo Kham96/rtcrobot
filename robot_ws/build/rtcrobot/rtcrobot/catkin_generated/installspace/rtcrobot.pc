@@ -1,0 +1,8 @@
+prefix=/home/gaara/robot_ws/install
+
+Name: rtcrobot
+Description: Description of rtcrobot
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy message_runtime message_runtime

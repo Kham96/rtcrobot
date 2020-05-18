@@ -1,0 +1,6 @@
+set(rtcrobot_actions_SETUP_PY_VERSION "0.0.0")
+set(rtcrobot_actions_SETUP_PY_SCRIPTS "")
+set(rtcrobot_actions_SETUP_PY_PACKAGES "rtcrobot_actions")
+set(rtcrobot_actions_SETUP_PY_PACKAGE_DIRS "src/rtcrobot_actions")
+set(rtcrobot_actions_SETUP_PY_MODULES "")
+set(rtcrobot_actions_SETUP_PY_MODULE_DIRS "")

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/gaara/robot_ws/src/install/setup.sh

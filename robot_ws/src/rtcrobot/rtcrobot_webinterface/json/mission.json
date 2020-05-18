@@ -1,0 +1,1 @@
+{"list": [{"status": 0, "description": "", "tyle": "save_mission", "command": "save_mission", "action": [{"y": 220, "x": 50, "Con": "Marker2", "type": "Move", "theta": 1}], "name_mission": "fff"}, {"status": 0, "description": "", "tyle": "save_mission", "command": "creat_mission", "action": [], "name_mission": "dffddf"}], "type": "save_mission"}

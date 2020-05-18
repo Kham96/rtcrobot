@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="rtcrobot" type="rtcrobot_node.py" name="rtcrobot" args="max_speed 0.2">
+    </node>
+</launch>

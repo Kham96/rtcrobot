@@ -1,0 +1,8 @@
+prefix=/home/gaara/robot_ws/devel
+
+Name: rtcrobot_description
+Description: Description of rtcrobot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

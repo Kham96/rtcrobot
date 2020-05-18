@@ -1,0 +1,11 @@
+# generated from genmsg/cmake/pkg-genmsg.context.in
+
+messages_str = "/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/DockAction.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/DockActionGoal.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/DockActionResult.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/DockActionFeedback.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/DockGoal.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/DockResult.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/DockFeedback.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/SaveMapAction.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/SaveMapActionGoal.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/SaveMapActionResult.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/SaveMapActionFeedback.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/SaveMapGoal.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/SaveMapResult.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/SaveMapFeedback.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/MissionAction.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/MissionActionGoal.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/MissionActionResult.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/MissionActionFeedback.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/MissionGoal.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/MissionResult.msg;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg/MissionFeedback.msg"
+services_str = ""
+pkg_name = "rtcrobot_actions"
+dependencies_str = "actionlib_msgs;geometry_msgs"
+langs = "gencpp;geneus;genlisp;gennodejs;genpy"
+dep_include_paths_str = "rtcrobot_actions;/home/gaara/robot_ws/src/devel/share/rtcrobot_actions/msg;actionlib_msgs;/opt/ros/melodic/share/actionlib_msgs/cmake/../msg;geometry_msgs;/opt/ros/melodic/share/geometry_msgs/cmake/../msg;std_msgs;/opt/ros/melodic/share/std_msgs/cmake/../msg"
+PYTHON_EXECUTABLE = "/usr/bin/python2"
+package_has_static_sources = 'TRUE' == 'TRUE'
+genmsg_check_deps_script = "/opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py"

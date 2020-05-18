@@ -1,0 +1,8 @@
+prefix=/home/gaara/robot_ws/src/devel
+
+Name: rtcrobot_gazebo
+Description: Description of rtcrobot_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

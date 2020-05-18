@@ -1,0 +1,2 @@
+set(sick_scan_MESSAGE_FILES "/home/gaara/robot_ws/src/sick_scan/msg/SickImu.msg;/home/gaara/robot_ws/src/sick_scan/msg/RadarObject.msg;/home/gaara/robot_ws/src/sick_scan/msg/RadarPreHeaderDeviceBlock.msg;/home/gaara/robot_ws/src/sick_scan/msg/RadarPreHeaderMeasurementParam1Block.msg;/home/gaara/robot_ws/src/sick_scan/msg/RadarPreHeaderStatusBlock.msg;/home/gaara/robot_ws/src/sick_scan/msg/RadarPreHeaderEncoderBlock.msg;/home/gaara/robot_ws/src/sick_scan/msg/RadarPreHeader.msg;/home/gaara/robot_ws/src/sick_scan/msg/RadarScan.msg")
+set(sick_scan_SERVICE_FILES "")

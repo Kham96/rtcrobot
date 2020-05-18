@@ -1,0 +1,8 @@
+prefix=/home/gaara/robot_ws/install
+
+Name: rtcrobot_joystick
+Description: Description of rtcrobot_joystick
+Version: 1.13.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp diagnostic_updater sensor_msgs

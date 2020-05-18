@@ -1,0 +1,10 @@
+<launch>
+    <include file="$(find rtcrobot_base)/include/d435r.launch" />
+
+    <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+        <arg name="time" value="2" />
+        <arg name="pkg" value="rtcrobot_base" />
+        <arg name="file" value="d435l.launch" />
+        <arg name="node_name" value="timed_roslaunch" />
+    </include>
+</launch>

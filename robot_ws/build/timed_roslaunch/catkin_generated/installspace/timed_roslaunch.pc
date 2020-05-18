@@ -1,0 +1,8 @@
+prefix=/home/gaara/robot_ws/install
+
+Name: timed_roslaunch
+Description: Description of timed_roslaunch
+Version: 0.1.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

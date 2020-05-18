@@ -1,0 +1,13 @@
+<launch>
+  <!-- Explicit output name -->
+  <node pkg="topic_tools" type="mux" name="mux_navmaps" output="screen"
+        args="maps/navigation/map maps/navigation/HBShop/map">
+        <param name="latch" value="true" />
+        <remap from="mux" to="mux_navmaps" />
+  </node>
+  
+  <node pkg="topic_tools" type="mux" name="mux_wallmaps" output="screen"
+        args="vitual_wall/map vitual_wall/map">
+        <remap from="mux" to="mux_wallmaps" />
+  </node>
+</launch>

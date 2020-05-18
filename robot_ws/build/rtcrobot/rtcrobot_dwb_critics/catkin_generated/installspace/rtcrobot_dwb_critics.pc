@@ -1,0 +1,8 @@
+prefix=/home/gaara/robot_ws/install
+
+Name: rtcrobot_dwb_critics
+Description: Description of rtcrobot_dwb_critics
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lrtcrobot_dwb_critics
+Requires: angles costmap_queue dwb_critics dwb_local_planner geometry_msgs nav_2d_msgs nav_2d_utils nav_core2 nav_grid_iterators pluginlib roscpp sensor_msgs

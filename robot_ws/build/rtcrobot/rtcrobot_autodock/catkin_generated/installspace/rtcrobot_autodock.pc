@@ -1,0 +1,8 @@
+prefix=/home/gaara/robot_ws/install
+
+Name: rtcrobot_autodock
+Description: Description of rtcrobot_autodock
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs nav_msgs roslib roscpp rospy sensor_msgs std_msgs tf

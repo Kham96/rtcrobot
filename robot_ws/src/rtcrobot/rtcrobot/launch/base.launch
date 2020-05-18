@@ -1,0 +1,23 @@
+<launch>
+    <arg name="ismapping" default="false"/>
+
+    <group if="$(arg ismapping)">
+        <include file="$(find rtcrobot)/launch/mapping.launch"/> 
+    </group>
+
+    <group unless="$(arg ismapping)">
+        <include file="$(find rtcrobot)/launch/navigation.launch"/> 
+    </group>
+
+    <include file="$(find rtcrobot)/launch/display.launch">
+        <arg name="model" default="$(find rtcrobot)/urdf/RTCRobot.urdf" unless="$(arg ismapping)"/>
+        <arg name="model" default="$(find rtcrobot)/urdf/RTCRobot_mapping.urdf" if="$(arg ismapping)"/>
+    </include>
+    <!--<include file="$(find rtcrobot)/launch/rplidar.launch"/>-->
+    <include file="$(find rtcrobot)/launch/motor.launch"/>
+    <include file="$(find rtcrobot)/launch/webserver.launch"/>
+
+    <node pkg="robot_pose_publisher" type="robot_pose_publisher" name="robot_pose_publisher">
+        <param name="base_link" value="base_footprint"/>
+    </node>
+</launch>

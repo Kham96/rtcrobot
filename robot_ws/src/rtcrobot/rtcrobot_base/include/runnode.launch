@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<launch>
+  <node pkg="rtcrobot_base" type="modemanager.py" name="mode_test" output="screen">
+    <rosparam command="load" file="$(find rtcrobot_base)/config/launchfile.yaml"/>
+  </node>
+</launch>

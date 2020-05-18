@@ -1,0 +1,8 @@
+prefix=/home/gaara/robot_ws/devel
+
+Name: rtcrobot_driver
+Description: Description of rtcrobot_driver
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: actionlib_msgs diagnostic_msgs dynamic_reconfigure geometry_msgs move_base_msgs nav_msgs rosgraph_msgs rospy_message_converter sensor_msgs std_msgs tf visualization_msgs
